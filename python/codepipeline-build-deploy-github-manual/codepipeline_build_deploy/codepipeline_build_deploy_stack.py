@@ -203,8 +203,8 @@ class CodepipelineBuildDeployStack(Stack):
             actions=[
                 pipelineactions.GitHubSourceAction(
                     action_name="GitHub",
-                    owner='github_user',    # TODO: Replace with your GitHub username
-                    repo='repo_name',   # TODO: Replace with your GitHub repository name
+                    owner='kwesijay1',    # TODO: Replace with your GitHub username
+                    repo='my-app-pipeline',   # TODO: Replace with your GitHub repository name
                     branch="main",
                     oauth_token=SecretValue.secrets_manager("github-access-token-secret"),
                     output=source_artifact,
